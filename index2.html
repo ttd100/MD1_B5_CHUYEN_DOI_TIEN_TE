@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="dientich"></h1>
+<h1 id="chu vi"></h1>
+<input type="text" id="radius">
+<button onclick="chuViDienTichHinhTron()"> hinh tron</button>
+<script>
+    function chuViDienTichHinhTron() {
+        let radius = +document.getElementById('radius').value;
+        console.log('radius==')
+        let area =Math.PI**radius;
+        let avg =Math.PI*2*radius;
+        document.getElementById('dientich').innerHTML= 'dien tich'+area;
+        document.getElementById('chu vi').innerHTML= 'chu vi'+avg;
+    }
+</script>
+
+</body>
+</html>

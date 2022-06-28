@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="text-align: right" width="600px">
+    <h1>Chuyển đổi tiền tệ</h1>
+    <tr>
+    <td>amount</td>
+    <td>from currency</td>
+    <td>to curency</td>
+        <td></td>
+
+    </tr>
+<tr>
+  <td><input type="text" id="input"></td>
+    <td><select name="viet nam" id="from">
+        <option value="vnd">viet nam</option>
+        <option value="usd">usd</option>
+    </select>
+    </td>
+    <td>
+        <select name="usd" id="to">
+            <option value="vnd">viet nam</option>
+            <option value="usd">usd</option>
+        </select>
+    </td>
+    <td><button onclick="convert()">convert</button></td>
+
+</tr>
+    <tr>
+        <td><h1 id="result">Result:</h1></td>
+    </tr>
+</table>
+<script>
+function convert() {
+    let money= +document.getElementById('input').value
+    let from= document.getElementById('from').value
+    let to= document.getElementById('to').value
+    if(from===to){
+        document.getElementById("result").innerHTML=money
+    }
+    else{
+        if(from==="vnd"){
+            document.getElementById("result").innerHTML=money/23000
+        }
+        else{
+            document.getElementById("result").innerHTML=money*23000
+        }
+    }
+
+}
+</script>
+</body>
+</html>
